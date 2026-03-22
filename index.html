@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zawadi Cargo and Logistics Limited — Zambia's leading customs clearing, forwarding and logistics company since 2012.">
+  <title>Zawadi Cargo &amp; Logistics | Clearing · Forwarding · Logistics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══════════════════════════════════════════ -->
+<nav id="navbar" class="over-hero">
+  <div class="nav-inner">
+
+    <a href="#hero" class="nav-logo">
+      <div class="logo-circle">
+        <img src="assets/logo.jpeg" alt="Zawadi Cargo Logo">
+      </div>
+      <div class="nav-logo-text">
+        <span class="t1">Zawadi Cargo</span>
+        <span class="t2">&amp; Logistics Limited</span>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#services"     data-section="services">Services</a></li>
+      <li><a href="#about"        data-section="about">About Us</a></li>
+      <li><a href="#clients"      data-section="clients">Clients</a></li>
+      <li><a href="#locations"    data-section="locations">Locations</a></li>
+      <li><a href="#contact-form" data-section="contact-form">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <a href="https://wa.me/260963386150?text=Hello%2C%20I%20need%20assistance%20with%20cargo%20clearing."
+         target="_blank" rel="noopener" class="btn-nav-wa">
+        <svg class="wa-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#25D366" d="M16 3C8.82 3 3 8.82 3 16c0 2.34.63 4.62 1.83 6.62L3 29l6.54-1.77A13.02 13.02 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3z"/>
+          <path fill="#fff" d="M22.4 19.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.03 1-1.03 2.45s1.05 2.84 1.2 3.04c.15.2 2.07 3.16 5.01 4.43.7.3 1.25.48 1.67.62.7.22 1.34.19 1.84.11.56-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+        </svg>
+        WhatsApp
+      </a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- ═══ MOBILE MENU OVERLAY ═══════════════════════════════
+     Separate fixed element — ABOVE the navbar (z:1001).
+     Not nested inside <nav> so it's immune to scroll-position
+     stacking context bugs that broke the old z-index:-1 trick.
+     ═══════════════════════════════════════════════════════ -->
+<div id="mobileMenu" class="mobile-menu-overlay" role="dialog" aria-modal="true" aria-label="Navigation menu">
+
+  <ul class="nav-links">
+    <li><a href="#services"     data-section="services">Services</a></li>
+    <li><a href="#about"        data-section="about">About Us</a></li>
+    <li><a href="#clients"      data-section="clients">Clients</a></li>
+    <li><a href="#locations"    data-section="locations">Locations</a></li>
+    <li><a href="#contact-form" data-section="contact-form">Contact</a></li>
+  </ul>
+
+  <div class="mobile-menu-cta">
+    <a href="https://wa.me/260963386150?text=Hello%2C%20I%20need%20assistance%20with%20cargo%20clearing."
+       target="_blank" rel="noopener" class="btn btn-wa">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:16px;height:16px;flex-shrink:0">
+        <path fill="#fff" d="M16 3C8.82 3 3 8.82 3 16c0 2.34.63 4.62 1.83 6.62L3 29l6.54-1.77A13.02 13.02 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3z"/>
+        <path fill="#25D366" d="M22.4 19.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.03 1-1.03 2.45s1.05 2.84 1.2 3.04c.15.2 2.07 3.16 5.01 4.43.7.3 1.25.48 1.67.62.7.22 1.34.19 1.84.11.56-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+      </svg>
+      WhatsApp Us
+    </a>
+    <a href="mailto:Operations@zawadicargoandlogistics.com" class="btn btn-primary">Send Email</a>
+  </div>
+
+</div>
+
+
+<!-- ═══ HERO ══════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-video-wrap">
+    <video id="hero-video" autoplay muted loop playsinline>
+      <source src="Vbackground.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="pulse-dot"></span>
+      Zambia's Premier Logistics Partner
+    </div>
+
+    <h1 class="hero-title">
+      Moving<br>
+      <span class="hero-morph-line">
+        <span id="heroMorphWord" class="morph-word style-gold">Cargo.</span>
+      </span>
+      <span class="outline">Building Futures.</span>
+    </h1>
+
+    <p class="hero-desc">
+      Trusted customs clearing, forwarding &amp; logistics — connecting Zambia to the world since 2012.
+      One contact. Zero hassle. Complete peace of mind.
+    </p>
+
+    <div class="hero-actions">
+      <a href="https://wa.me/260963386150?text=Hello%2C%20I%20need%20to%20clear%20my%20goods.%20Please%20assist."
+         target="_blank" rel="noopener" class="btn btn-wa">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:16px;height:16px;flex-shrink:0">
+          <path fill="#fff" d="M16 3C8.82 3 3 8.82 3 16c0 2.34.63 4.62 1.83 6.62L3 29l6.54-1.77A13.02 13.02 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3z"/>
+          <path fill="#25D366" d="M22.4 19.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.03 1-1.03 2.45s1.05 2.84 1.2 3.04c.15.2 2.07 3.16 5.01 4.43.7.3 1.25.48 1.67.62.7.22 1.34.19 1.84.11.56-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+        </svg>
+        WhatsApp for Clearing
+      </a>
+      <span class="hero-divider"></span>
+      <a href="mailto:Operations@zawadicargoandlogistics.com?subject=Cargo%20Clearing%20Enquiry"
+         class="btn btn-ghost-white">Email Us</a>
+      <a href="#services" class="btn btn-ghost-white">Our Services</a>
+    </div>
+  </div>
+
+  <!-- Stats strip -->
+  <div class="hero-stats-strip">
+    <div class="hero-stats-inner">
+      <div class="hstat">
+        <div class="hstat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div><span class="hstat-num" data-count="13" data-suffix="+">13+</span><span class="hstat-lbl">Years Experience</span></div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><span class="hstat-num" data-count="6">6</span><span class="hstat-lbl">Border Locations</span></div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div><span class="hstat-num" data-count="100" data-suffix="%">100%</span><span class="hstat-lbl">Zambian Owned</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
+</section>
+
+
+<!-- ═══ INFO BAR ══════════════════════════════════════════ -->
+<div class="info-bar">
+  <div class="info-bar-inner">
+    <div class="ib-item reveal" data-delay="0">
+      <div class="ib-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16 3C8.82 3 3 8.82 3 16c0 2.34.63 4.62 1.83 6.62L3 29l6.54-1.77A13.02 13.02 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm6.4 16.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.03 1-1.03 2.45s1.05 2.84 1.2 3.04c.15.2 2.07 3.16 5.01 4.43.7.3 1.25.48 1.67.62.7.22 1.34.19 1.84.11.56-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg></div>
+      <div class="ib-text"><label>WhatsApp</label><span><a href="https://wa.me/260963386150" target="_blank" rel="noopener">+260 96 3386150</a></span></div>
+    </div>
+    <div class="ib-item reveal" data-delay="1">
+      <div class="ib-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+      <div class="ib-text"><label>Email</label><span><a href="mailto:Operations@zawadicargoandlogistics.com">Operations@zawadicargoandlogistics.com</a></span></div>
+    </div>
+    <div class="ib-item reveal" data-delay="2">
+      <div class="ib-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.09 1.22a2 2 0 012-2.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 6.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 13.92z"/></svg></div>
+      <div class="ib-text"><label>Call Directly</label><span><a href="tel:+260963386150">+260 96 3386150</a> &nbsp;|&nbsp; <a href="tel:+260969569225">+260 96 9569225</a></span></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ SERVICES ══════════════════════════════════════════ -->
+<section class="section section-tint" id="services">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="tag-label">What We Do</div>
+      <h2>Our Core <em>Services</em></h2>
+      <p>End-to-end logistics solutions tailored for businesses importing and exporting across Zambia and beyond.</p>
+    </div>
+    <div class="services-grid stagger">
+      <div class="svc-card"><span class="svc-n">01</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div><h3>Local &amp; International Cargo</h3><p>Management of Import &amp; Export cargo — vehicles, general cargo, steel, specialized vehicles, and project cargo — handled with precision from origin to destination.</p></div>
+      <div class="svc-card"><span class="svc-n">02</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h3>Transport &amp; Logistics</h3><p>Safe, timely delivery of goods from A to Z. We act as your single point of contact, coordinating all parties for a seamless logistics experience.</p></div>
+      <div class="svc-card"><span class="svc-n">03</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div><h3>Customs Clearing</h3><p>Experienced staff handling customs matters, legislation, and tariff headings. Our EDI system enables fast electronic declarations for local and international clients.</p></div>
+      <div class="svc-card"><span class="svc-n">04</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/><circle cx="12" cy="20" r="1"/><circle cx="20" cy="20" r="1"/></svg></div><h3>Vehicle Import &amp; Export</h3><p>Specialized clearance for all vehicle types at every major border crossing. Full management of documentation and compliance — delivered without hassle.</p></div>
+      <div class="svc-card"><span class="svc-n">05</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div><h3>Project Cargo</h3><p>Dedicated solutions for oversized, heavy-lift, and project-specific shipments. We coordinate complex logistics requiring specialised equipment and permits.</p></div>
+      <div class="svc-card"><span class="svc-n">06</span><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><h3>Shipping &amp; Forwarding</h3><p>Comprehensive freight forwarding services connecting Zambia globally. All documentation, shipping arrangements, and delivery coordinated under one roof.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ ABOUT ══════════════════════════════════════════════ -->
+<section class="section section-light" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-stats reveal-l">
+        <div class="astat blue-hl"><span class="astat-num" data-count="2012">2012</span><span class="astat-lbl">Year Established</span><p class="astat-desc">A decade-plus of trusted service across Zambia and international trade routes.</p></div>
+        <div class="astat"><span class="astat-num" data-count="6">6</span><span class="astat-lbl">Border Locations</span><p class="astat-desc">Positioned at Zambia's most active trade crossings.</p></div>
+        <div class="astat span-2"><span class="astat-num" data-count="100" data-suffix="%">100%</span><span class="astat-lbl">Zambian Owned &amp; Operated</span><p class="astat-desc">Deep local knowledge. International standards. Your cargo is in the right hands.</p></div>
+      </div>
+      <div class="about-text reveal-r">
+        <div class="tag-label">Our Story</div>
+        <h2>Zambian-Owned.<br><em>World-Class</em> Service.</h2>
+        <p>Zawadi Cargo and Logistics Limited is a proudly Zambian-owned Customs Clearing &amp; Forwarding Agent, established in 2012 with its head office in Lusaka. Over the years we have grown to serve clients across Zambia and internationally with specialised freight and clearance solutions.</p>
+        <p>We act as a single point of contact for all parties involved — arranging Shipping, Clearance &amp; Forwarding to create the most efficient avenue for your freight and logistical requirements.</p>
+        <div class="pillars">
+          <div class="pillar"><strong>Mission</strong><span>To be the leading logistics, clearing and forwarding service provider in Zambia.</span></div>
+          <div class="pillar"><strong>Vision</strong><span>A leading contributor to national development in the clearing services sector.</span></div>
+          <div class="pillar"><strong>Values</strong><span>Quality. Efficiency. Support. Honest &amp; Efficient Work, always.</span></div>
+          <div class="pillar"><strong>Management</strong><span>Led by professionals with deep expertise in international trade and logistics.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ CLIENTS ════════════════════════════════════════════ -->
+<section class="section section-light" id="clients">
+  <div class="section-inner">
+    <div class="clients-intro reveal">
+      <div class="tag-label" style="justify-content:center">Our Clients</div>
+      <h2>Valued <em>Partnerships</em></h2>
+      <p>Trusted by leading businesses across Zambia and beyond — from enterprise manufacturers to emerging traders.</p>
+    </div>
+    <div class="clients-track-wrap reveal">
+      <div class="clients-track">
+        <div class="client-card"><img src="https://static.wixstatic.com/media/caef49_7a58e8bbd3a14bcdbd86b42ce26edadd~mv2.png/v1/fill/w_220,h_123,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/metl_logo.png" alt="Mohamed Enterprises" loading="lazy"><span>Mohamed Enterprises</span></div>
+        <div class="client-card"><img src="https://static.wixstatic.com/media/caef49_0b8ae86779464560bf5c2ea934a6a641~mv2.png/v1/fill/w_220,h_90,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo.png" alt="HerOcean" loading="lazy"><span>HerOcean</span></div>
+        <div class="client-card"><img src="https://static.wixstatic.com/media/caef49_0aeab949298b42b2b3d0b06deeefdcf5~mv2.png/v1/fill/w_220,h_59,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/index.png" alt="Famari Investments" loading="lazy"><span>Famari Investments</span></div>
+        <div class="client-card"><img src="https://static.wixstatic.com/media/caef49_4a9986ada1c14538a37b25a2b58a0896~mv2.jpg/v1/fill/w_220,h_114,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Vin%20mart.jpg" alt="Vinmart" loading="lazy"><span>Vinmart</span></div>
+        <div class="client-card"><img src="https://static.wixstatic.com/media/caef49_d2ae26bb266a4cb28e3dba9d577634ba~mv2.jpg/v1/fill/w_220,h_81,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/eastern.jpg" alt="Eastern Union" loading="lazy"><span>Eastern Union</span></div>
+        <div class="client-card"><img src="https://static.wixstatic.com/media/caef49_7a58e8bbd3a14bcdbd86b42ce26edadd~mv2.png/v1/fill/w_220,h_123,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/metl_logo.png" alt="Mohamed Enterprises" loading="lazy"><span>Mohamed Enterprises</span></div>
+        <div class="client-card"><img src="https://static.wixstatic.com/media/caef49_0b8ae86779464560bf5c2ea934a6a641~mv2.png/v1/fill/w_220,h_90,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo.png" alt="HerOcean" loading="lazy"><span>HerOcean</span></div>
+        <div class="client-card"><img src="https://static.wixstatic.com/media/caef49_0aeab949298b42b2b3d0b06deeefdcf5~mv2.png/v1/fill/w_220,h_59,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/index.png" alt="Famari Investments" loading="lazy"><span>Famari Investments</span></div>
+        <div class="client-card"><img src="https://static.wixstatic.com/media/caef49_4a9986ada1c14538a37b25a2b58a0896~mv2.jpg/v1/fill/w_220,h_114,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Vin%20mart.jpg" alt="Vinmart" loading="lazy"><span>Vinmart</span></div>
+        <div class="client-card"><img src="https://static.wixstatic.com/media/caef49_d2ae26bb266a4cb28e3dba9d577634ba~mv2.jpg/v1/fill/w_220,h_81,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/eastern.jpg" alt="Eastern Union" loading="lazy"><span>Eastern Union</span></div>
+      </div>
+    </div>
+    <div class="clients-stats reveal">
+      <div class="cstat"><span class="cstat-num" data-count="5">5</span><span class="cstat-lbl">Active Clients</span></div>
+      <div class="cstat"><span class="cstat-num" data-count="13" data-suffix="+">13+</span><span class="cstat-lbl">Years Serving Zambia</span></div>
+      <div class="cstat"><span class="cstat-num" data-count="6">6</span><span class="cstat-lbl">Border Crossings</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ LOCATIONS + MAP ════════════════════════════════════ -->
+<section class="section section-tint" id="locations">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="tag-label">Where We Operate</div>
+      <h2>Our <em>Locations</em></h2>
+      <p>Strategically positioned at Zambia's key border crossings and commercial hubs for rapid clearance.</p>
+    </div>
+    <div class="locations-layout">
+      <div class="locations-list reveal-l">
+        <div class="loc-item active" data-map="https://www.openstreetmap.org/export/embed.html?bbox=27.9,-15.55,28.6,-15.28&amp;layer=mapnik&amp;marker=-15.4166,28.2833" data-ext="https://www.openstreetmap.org/?mlat=-15.4166&amp;mlon=28.2833#map=13/-15.4166/28.2833">
+          <div class="loc-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="loc-info"><h4>Lusaka <span class="hq-tag">Head Office</span></h4><p>P.O BOX BOFW137, Lusaka, Zambia</p><div class="loc-contact">Gift Munthali &nbsp;&middot;&nbsp; +260 96 9569225 &nbsp;|&nbsp; +260 97 9678079</div></div>
+        </div>
+        <div class="loc-item" data-map="https://www.openstreetmap.org/export/embed.html?bbox=32.63,-9.47,32.90,-9.24&amp;layer=mapnik&amp;marker=-9.3583,32.7667" data-ext="https://www.openstreetmap.org/?mlat=-9.3583&amp;mlon=32.7667#map=13/-9.3583/32.7667">
+          <div class="loc-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="loc-info"><h4>Nakonde <span class="branch-tag">Branch</span></h4><p>Room 1 Kasama Grill, Great North Road, P.O BOX 430102</p><div class="loc-contact">Ernest Munthali: +260 96 3386150 &nbsp;|&nbsp; Suzika Ngulube: +260 97 5845369</div></div>
+        </div>
+        <div class="loc-item" data-map="https://www.openstreetmap.org/export/embed.html?bbox=28.00,-12.38,28.18,-12.21&amp;layer=mapnik&amp;marker=-12.2980,28.0890" data-ext="https://www.openstreetmap.org/?mlat=-12.298&amp;mlon=28.089#map=14/-12.298/28.089">
+          <div class="loc-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+          <div class="loc-info"><h4>Kasumbalesa</h4><p>DRC Border Post &mdash; full import &amp; export clearing operations</p></div>
+        </div>
+        <div class="loc-item" data-map="https://www.openstreetmap.org/export/embed.html?bbox=27.72,-12.70,27.90,-12.53&amp;layer=mapnik&amp;marker=-12.6167,27.8167" data-ext="https://www.openstreetmap.org/?mlat=-12.617&amp;mlon=27.817#map=14/-12.617/27.817">
+          <div class="loc-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+          <div class="loc-info"><h4>Mokambo</h4><p>DRC Border Post &mdash; customs clearing services</p></div>
+        </div>
+        <div class="loc-item" data-map="https://www.openstreetmap.org/export/embed.html?bbox=28.78,-16.10,28.98,-15.95&amp;layer=mapnik&amp;marker=-16.0333,28.8833" data-ext="https://www.openstreetmap.org/?mlat=-16.033&amp;mlon=28.883#map=14/-16.033/28.883">
+          <div class="loc-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+          <div class="loc-info"><h4>Chirundu</h4><p>Zimbabwe Border Post &mdash; comprehensive customs services</p></div>
+        </div>
+        <div class="loc-item" data-map="https://www.openstreetmap.org/export/embed.html?bbox=25.13,-17.88,25.34,-17.70&amp;layer=mapnik&amp;marker=-17.7833,25.2667" data-ext="https://www.openstreetmap.org/?mlat=-17.783&amp;mlon=25.267#map=14/-17.783/25.267">
+          <div class="loc-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+          <div class="loc-info"><h4>Kazungula</h4><p>Botswana / Zimbabwe Border &mdash; logistics &amp; clearing</p></div>
+        </div>
+      </div>
+      <div class="map-wrap reveal-r">
+        <iframe id="mapFrame" src="https://www.openstreetmap.org/export/embed.html?bbox=27.9,-15.55,28.6,-15.28&amp;layer=mapnik&amp;marker=-15.4166,28.2833" allowfullscreen loading="lazy" title="Zawadi Cargo Location Map"></iframe>
+        <div class="map-footer">
+          <span>Select a location to navigate</span>
+          <a id="mapExtLink" href="https://www.openstreetmap.org/?mlat=-15.4166&amp;mlon=28.2833#map=13/-15.4166/28.2833" target="_blank" rel="noopener">Open in Maps &nearr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ CTA SECTION ═══════════════════════════════════════ -->
+<section id="cta">
+  <div class="section-inner">
+    <div class="cta-card reveal">
+      <div>
+        <div class="tag-label light">Get Started Today</div>
+        <h2>Ready to Clear<br><em>Your Goods?</em></h2>
+        <p>Get in touch with our team via WhatsApp for the fastest response, or send us an email with your requirements. We handle everything — documentation, customs, delivery.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="https://wa.me/260963386150?text=Hello%20Zawadi%20Cargo%2C%20I%20would%20like%20to%20clear%20my%20goods." target="_blank" rel="noopener" class="btn btn-wa">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:15px;height:15px;flex-shrink:0"><path fill="#fff" d="M16 3C8.82 3 3 8.82 3 16c0 2.34.63 4.62 1.83 6.62L3 29l6.54-1.77A13.02 13.02 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3z"/><path fill="#25D366" d="M22.4 19.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.03 1-1.03 2.45s1.05 2.84 1.2 3.04c.15.2 2.07 3.16 5.01 4.43.7.3 1.25.48 1.67.62.7.22 1.34.19 1.84.11.56-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
+          WhatsApp Now
+        </a>
+        <a href="mailto:Operations@zawadicargoandlogistics.com?subject=Cargo%20Clearing%20Request" class="btn btn-primary">Send Email</a>
+        <a href="#contact-form" class="btn btn-ghost-white">Fill a Form</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ CONTACT FORM ══════════════════════════════════════ -->
+<section class="section section-light" id="contact-form">
+  <div class="section-inner">
+    <div class="contact-layout">
+      <div class="contact-info reveal-l">
+        <div class="tag-label">Contact Us</div>
+        <h3>Let's Talk <em>Business</em></h3>
+        <p>Whether you need customs clearing, cargo management, or just a quote — our team responds quickly. WhatsApp is the fastest way to reach us.</p>
+        <div class="c-list">
+          <div class="c-item"><div class="c-ico"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16 3C8.82 3 3 8.82 3 16c0 2.34.63 4.62 1.83 6.62L3 29l6.54-1.77A13.02 13.02 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm6.4 16.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.03 1-1.03 2.45s1.05 2.84 1.2 3.04c.15.2 2.07 3.16 5.01 4.43.7.3 1.25.48 1.67.62.7.22 1.34.19 1.84.11.56-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg></div><div class="c-txt"><label>WhatsApp (Fastest)</label><span><a href="https://wa.me/260963386150" target="_blank" rel="noopener">+260 96 3386150</a></span></div></div>
+          <div class="c-item"><div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="c-txt"><label>Email</label><span>Operations@zawadicargoandlogistics.com</span></div></div>
+          <div class="c-item"><div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="c-txt"><label>Head Office — Lusaka</label><span>P.O BOX BOFW137, Lusaka<br>Gift Munthali: +260 96 9569225</span></div></div>
+          <div class="c-item"><div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="c-txt"><label>Nakonde Branch</label><span>Room 1 Kasama Grill, Great North Road, P.O BOX 430102</span></div></div>
+        </div>
+        <div class="contact-btns">
+          <a href="https://wa.me/260963386150?text=Hi%20Zawadi%20Cargo%2C%20I%20need%20help%20with%20clearing." target="_blank" rel="noopener" class="btn btn-wa">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:15px;height:15px;flex-shrink:0"><path fill="#fff" d="M16 3C8.82 3 3 8.82 3 16c0 2.34.63 4.62 1.83 6.62L3 29l6.54-1.77A13.02 13.02 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3z"/><path fill="#25D366" d="M22.4 19.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.03 1-1.03 2.45s1.05 2.84 1.2 3.04c.15.2 2.07 3.16 5.01 4.43.7.3 1.25.48 1.67.62.7.22 1.34.19 1.84.11.56-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
+            Open WhatsApp
+          </a>
+          <a href="mailto:Operations@zawadicargoandlogistics.com" class="btn btn-primary">Send Email</a>
+        </div>
+      </div>
+      <div class="reveal-r">
+        <div class="form-box">
+          <h3>Send a Message</h3>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="fg"><label for="fname">First Name *</label><input type="text" id="fname" name="fname" placeholder="John" required></div>
+              <div class="fg"><label for="flname">Last Name</label><input type="text" id="flname" name="flname" placeholder="Doe"></div>
+            </div>
+            <div class="fg"><label for="femail">Email Address *</label><input type="email" id="femail" name="femail" placeholder="your@email.com" required></div>
+            <div class="fg"><label for="fphone">Phone / WhatsApp</label><input type="tel" id="fphone" name="fphone" placeholder="+260 ..."></div>
+            <div class="fg">
+              <label for="fservice">Service Required</label>
+              <select id="fservice" name="fservice">
+                <option value="">Select a service...</option>
+                <option>Customs Clearing</option>
+                <option>Local Cargo Movement</option>
+                <option>International Cargo Movement</option>
+                <option>Vehicle Import / Export</option>
+                <option>Project Cargo</option>
+                <option>Transport &amp; Logistics</option>
+                <option>Shipping &amp; Forwarding</option>
+                <option>General Enquiry</option>
+              </select>
+            </div>
+            <div class="fg"><label for="fmessage">Message *</label><textarea id="fmessage" name="fmessage" placeholder="Tell us about your cargo — type, origin, destination, timeline..." required></textarea></div>
+            <div class="form-foot">
+              <button type="submit" class="btn btn-gold">Send Message &rarr;</button>
+              <p class="form-note">Typically respond within a few hours.</p>
+            </div>
+            <div class="form-ok" id="formSuccess">Message sent. We will be in touch shortly. For a faster response, WhatsApp us directly.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ FOOTER ════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-circle"><img src="assets/logo.jpeg" alt="Zawadi Cargo Logo"></div>
+        <p>Zawadi Cargo and Logistics Limited — proudly Zambian-owned customs clearing and freight forwarding specialists since 2012.</p>
+        <div class="f-socials">
+          <a href="https://wa.me/260963386150" target="_blank" rel="noopener" class="f-soc" title="WhatsApp"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16 3C8.82 3 3 8.82 3 16c0 2.34.63 4.62 1.83 6.62L3 29l6.54-1.77A13.02 13.02 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm6.4 16.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.03 1-1.03 2.45s1.05 2.84 1.2 3.04c.15.2 2.07 3.16 5.01 4.43.7.3 1.25.48 1.67.62.7.22 1.34.19 1.84.11.56-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg></a>
+          <a href="mailto:Operations@zawadicargoandlogistics.com" class="f-soc" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+          <a href="tel:+260963386150" class="f-soc" title="Call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.09 1.22a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 6.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 13.92z"/></svg></a>
+          <a href="https://www.facebook.com/Zawadi-Cargo-and-Logistics-Limited-801066216643278/" target="_blank" rel="noopener" class="f-soc" title="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="#services">Customs Clearing</a></li><li><a href="#services">Cargo Movement</a></li><li><a href="#services">Transport &amp; Logistics</a></li><li><a href="#services">Vehicle Imports</a></li><li><a href="#services">Project Cargo</a></li><li><a href="#services">Freight Forwarding</a></li></ul></div>
+      <div class="footer-col"><h4>Locations</h4><ul><li><a href="#locations">Lusaka (HQ)</a></li><li><a href="#locations">Nakonde</a></li><li><a href="#locations">Kasumbalesa</a></li><li><a href="#locations">Mokambo</a></li><li><a href="#locations">Chirundu</a></li><li><a href="#locations">Kazungula</a></li></ul></div>
+      <div class="footer-col"><h4>Get In Touch</h4><address><a href="https://wa.me/260963386150" target="_blank" rel="noopener">WhatsApp: +260 96 3386150</a><br><br><a href="mailto:Operations@zawadicargoandlogistics.com">Operations@zawadicargoandlogistics.com</a><br><br>P.O BOX BOFW137, Lusaka<br>P.O BOX 430102, Nakonde</address></div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year></span> Zawadi Cargo and Logistics Limited. All rights reserved.</p>
+      <p class="footer-tagline">Quality &middot; Efficiency &middot; Support</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══ FLOATING BUTTONS ══════════════════════════════════ -->
+<div class="float-btns" id="floatBtns">
+  <a href="https://wa.me/260963386150?text=Hello%20Zawadi%20Cargo%2C%20I%20need%20help%20with%20cargo%20clearing." target="_blank" rel="noopener" class="fb fb-wa">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:22px;height:22px"><path fill="#fff" d="M16 3C8.82 3 3 8.82 3 16c0 2.34.63 4.62 1.83 6.62L3 29l6.54-1.77A13.02 13.02 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3z"/><path fill="#25D366" d="M22.4 19.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.03 1-1.03 2.45s1.05 2.84 1.2 3.04c.15.2 2.07 3.16 5.01 4.43.7.3 1.25.48 1.67.62.7.22 1.34.19 1.84.11.56-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
+    <span class="fb-tip">WhatsApp</span>
+  </a>
+  <a href="mailto:Operations@zawadicargoandlogistics.com?subject=Cargo%20Enquiry" class="fb fb-email">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    <span class="fb-tip">Email Us</span>
+  </a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
